@@ -1,6 +1,8 @@
 ---
 title: "wk5"
-output: html_document
+output:
+  word_document: default
+  html_document: default
 ---
 ```{r echo=FALSE}
 library(plotly)
@@ -68,16 +70,68 @@ ihist
 library(flexdashboard)
 
 ---
-title: "Untitled"
+title：'Miss Selfridge'
 output:
   flexdashboard::flex_dashboard:
   runtime: flexdashboard
 ---
+#This is an example of an interactive dashboard...
+
+    
+Column {data-width=600}
+-------------------------------------
+### Chart 1
+```
+
+
+```{r}
+Column {data-width=400}
+-------------------------------------
+### Chart 2
+```
+
+
+```{r}
+knitr::opts_chunk$set(echo=TRUE)
+
 ```
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+```{r}
+
+title: "R Notebook"
+output:
+  html_document: 
+    number_sections: yes
+    theme: yeti
+    highlight: textmate
+    toc: yes
+    toc_float:
+      collapsed: no
+      smooth_scroll: yes
+editor_options: 
+  chunk_output_type: inline
+bibliography: library.bib
+
+
+```
+```{r}
+[@Walker2019]
+```
+```{r}
+library(citr)
+```
+
+
+```{r}
+#install.packages('remotes')
+library(remotes)
+remotes::install_github("karthik/holepunch")
+```
+
 
 ## R Markdown
 
