@@ -2,7 +2,7 @@
 title: "wk5"
 output: html_document
 ---
-```{r}
+```{r echo=FALSE}
 library(plotly)
 library(raster)
 #install.packages('weathermetrics')
@@ -60,6 +60,19 @@ ihist<-plot_ly(alpha = 0.6) %>%
         layout(barmode = "overlay", xaxis=x, yaxis=y)
 
 ihist
+```
+
+
+```{r}
+#install.packages("flexdashboard")
+library(flexdashboard)
+
+---
+title: "Untitled"
+output:
+  flexdashboard::flex_dashboard:
+  runtime: flexdashboard
+---
 ```
 
 ```{r setup, include=FALSE}
